@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Svelte app</title>
+
+    <script defer src="bsm-components.js"></script>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      bsm-button {
+        display: block;
+        margin: 2em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>Click the button a bunch.</p>
+    <bsm-button text="Click Me"></bsm-button>
+
+    <bsm-card title="My Cool Card" content="lorem ipsum dolor..."></bsm-card>
+  </body>
+  <script>
+    document.querySelector('bsm-card').addEventListener('hiya', () => {
+      alert('Hiya, Mate!');
+    });
+  </script>
+</html>
